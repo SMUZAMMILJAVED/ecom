@@ -2,7 +2,7 @@ import Layout from '@/components/Layout'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-function order() {
+function Order() {
   const [orders,setOrders]=useState([]);
   useEffect(()=>{
   axios.get('/api/orders').then(response=>{
@@ -57,4 +57,4 @@ function order() {
   )
 }
 
-export default order
+export default Order
