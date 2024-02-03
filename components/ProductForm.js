@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Spinner from "./Spinner";
 import { ReactSortable } from "react-sortablejs";
 import Swal from "sweetalert2";
+import Image from "next/image";
 
 function ProductForm({
   _id,
@@ -163,7 +164,8 @@ function ProductForm({
   {!!images?.length &&
     images.map((link, index) => (
       <div key={link} className="h-24 bg-white p-4 shadow-sm rounded-sm relative">
-        <img src={link} className="rounded-lg" />
+        {/* <img src={link} className="rounded-lg" /> */}
+        <Image  src={link} className="rounded-lg" alt={link}/>
         <button
           onClick={() => handleDeleteImage(index)}
           className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center cursor-pointer"
